@@ -1,17 +1,17 @@
 // src/app/components/MainComponent.tsx
-import React, { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/rootReducer';
 import { increment, decrement } from '../store/counter/counterSlice';
 import { addTodo, toggleTodo } from '../store/todo/todoSlice';
-import CountryList from './countryList';
+
 
 const MainComponent: React.FC = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state: RootState) => state.counter.value);
   const todos = useSelector((state: RootState) => state.todo.todos);
 
-  const [currentComponent, setCurrentComponent] = useState<string>('main');
+
 
   const handleIncrement = () => {
     dispatch(increment());
@@ -44,9 +44,7 @@ const MainComponent: React.FC = () => {
         ))}
       </ul>
 
-      <button onClick={() => setCurrentComponent('country')}>View Country List</button>
-
-      {currentComponent === 'country' && <CountryList />}
+      
       
       <input
         type="text"

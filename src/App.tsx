@@ -5,6 +5,7 @@ import rootReducer from './app/store/rootReducer';
 import MainComponent from "./app/components/mainComponent";
 
 import "./App.css";
+import CatList from "./app/components/catList";
 
 const store = configureStore({
   reducer: rootReducer,
@@ -17,6 +18,7 @@ function App() {
         <h1>Redux</h1>
         <Provider store={store}>
       <MainComponent />
+      <CatList/>
     </Provider>
       </section>
     </>

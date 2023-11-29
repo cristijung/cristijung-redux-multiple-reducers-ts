@@ -23,3 +23,7 @@ code {
   max-width: 96%;
   margin: auto;
 }
+
+ul {
+  list-style-type: none;
+}
