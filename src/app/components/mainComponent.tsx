@@ -1,17 +1,14 @@
 // src/app/components/MainComponent.tsx
 
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../store/rootReducer';
-import { increment, decrement } from '../store/counter/counterSlice';
-import { addTodo, toggleTodo } from '../store/todo/todoSlice';
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../store/rootReducer";
+import { increment, decrement } from "../store/counter/counterSlice";
+import { addTodo, toggleTodo } from "../store/todo/todoSlice";
 
 const MainComponent: React.FC = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state: RootState) => state.counter.value);
   const todos = useSelector((state: RootState) => state.todo.todos);
-
-
 
   const handleIncrement = () => {
     dispatch(increment());
@@ -31,28 +28,27 @@ const MainComponent: React.FC = () => {
 
   return (
     <div>
-      <h1>Counter: {counter}</h1>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+      <h1>Contador: {counter}</h1>
+      <button onClick={handleIncrement} className="btn">Incrementar</button>
+      <button onClick={handleDecrement} className="btn">Decrementar</button>
 
-      <h2>Todos</h2>
+      <hr />
+      <h2>ToDos</h2>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id} onClick={() => handleToggleTodo(todo.id)}>
-            {todo.text} - {todo.completed ? 'Completed' : 'Not Completed'}
+            {todo.text} - {todo.completed ? "Completed" : "Not Completed"}
           </li>
         ))}
       </ul>
 
-      
-      
       <input
         type="text"
         placeholder="Add Todo"
         onKeyDown={(e) => {
-          if (e.key === 'Enter' && e.currentTarget.value.trim() !== '') {
+          if (e.key === "Enter" && e.currentTarget.value.trim() !== "") {
             handleAddTodo(e.currentTarget.value);
-            e.currentTarget.value = '';
+            e.currentTarget.value = "";
           }
         }}
       />

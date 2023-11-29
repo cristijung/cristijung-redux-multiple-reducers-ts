@@ -13,7 +13,7 @@ const CatList: React.FC = () => {
   useEffect(() => {
     dispatch(fetchCats() as any); // Adicione 'as any' aqui
   }, [dispatch]);
-  
+
   if (status === 'loading') {
     return <div>Loading...</div>;
   }
@@ -24,7 +24,8 @@ const CatList: React.FC = () => {
 
   return (
     <div>
-      <h2>Cat List</h2>
+        <hr/>
+      <h2>Lista de Gatos - via API</h2>
       <ul>
         {cats.map((cat) => (
           <li key={cat.id}>

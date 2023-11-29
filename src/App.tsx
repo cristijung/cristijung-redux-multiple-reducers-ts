@@ -1,7 +1,7 @@
 import React from "react";
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './app/store/rootReducer';
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "./app/store/rootReducer";
 import MainComponent from "./app/components/mainComponent";
 
 import "./App.css";
@@ -16,10 +16,11 @@ function App() {
     <>
       <section className="content">
         <h1>Redux</h1>
+        <hr/>
         <Provider store={store}>
-      <MainComponent />
-      <CatList/>
-    </Provider>
+          <MainComponent />
+          <CatList />
+        </Provider>
       </section>
     </>
   );

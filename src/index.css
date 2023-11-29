@@ -1,6 +1,8 @@
 :root {
   --fundo-body: #363636;
   --text-principal: #F8F8FF;
+  --fundo-btn: #FFC0CB;
+  --text-btn: #4F4F4F;
 }
 
 body {
@@ -26,4 +28,15 @@ code {
 
 ul {
   list-style-type: none;
+}
+
+.btn {
+  background-color: var(--fundo-btn);
+  color: var(--text-btn);
+  border: 0px;
+  border-radius: 2px;
+  margin-right: 4px;
+  padding: 5px 5px;
+   
+
 }
