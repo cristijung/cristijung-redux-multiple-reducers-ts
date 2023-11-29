@@ -10,4 +10,8 @@ Código básico para gravação de vídeo sobre Redux.
 4. 7. Redux RTK: -- `npm install @reduxjs/toolkit react-redux`
 5. Axios: -- `npm install axios`
 6. API: -- (https://thecatapi.com/)
+7. React Hook Form: -- `npm install react-hook-form`
+
+### Observação:
+Este código tem o mínimo de estilização;
 

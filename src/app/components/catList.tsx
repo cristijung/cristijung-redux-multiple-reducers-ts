@@ -11,7 +11,7 @@ const CatList: React.FC = () => {
   const error = useSelector((state: RootState) => state.cat.error);
 
   useEffect(() => {
-    dispatch(fetchCats() as any); // Adicione 'as any' aqui
+    dispatch(fetchCats() as any); 
   }, [dispatch]);
 
   if (status === 'loading') {
@@ -23,8 +23,7 @@ const CatList: React.FC = () => {
   }
 
   return (
-    <div>
-        <hr/>
+    <div>       
       <h2>Lista de Gatos - via API</h2>
       <ul>
         {cats.map((cat) => (

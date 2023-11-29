@@ -44,7 +44,7 @@ const MainComponent: React.FC = () => {
 
       <input
         type="text"
-        placeholder="Add Todo"
+        placeholder="Adicionar ToDo"
         onKeyDown={(e) => {
           if (e.key === "Enter" && e.currentTarget.value.trim() !== "") {
             handleAddTodo(e.currentTarget.value);

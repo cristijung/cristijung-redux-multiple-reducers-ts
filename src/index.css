@@ -3,6 +3,8 @@
   --text-principal: #F8F8FF;
   --fundo-btn: #FFC0CB;
   --text-btn: #4F4F4F;
+  --borda-forms: #DCDCDC;
+  --text-title: #f3d1f2;
 }
 
 body {
@@ -36,7 +38,11 @@ ul {
   border: 0px;
   border-radius: 2px;
   margin-right: 4px;
-  padding: 5px 5px;
-   
+  padding: 5px 5px; 
+  cursor: pointer;  
 
+}
+
+h1 {
+  color: var(--text-title);
 }

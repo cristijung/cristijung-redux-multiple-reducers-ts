@@ -1,0 +1,25 @@
+
+.formulario {
+    max-width: 50%;
+    margin: auto;
+    border: 1px solid var(--borda-forms);
+    border-radius: 4px;
+    padding: 2%;
+    
+}
+
+.campo {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #EE82EE;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .campo::focus {
+    border-color: #9400D3; 
+  }
+
+  /*trocar depois as cores por variáveis*/

@@ -1,0 +1,29 @@
+//só o flex box
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    flex: 1 1 45%; /* ajuste conforme necessário para espaço entre as colunas */
+    margin: 10px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Adicione estilos adicionais conforme necessário para o conteúdo dentro dos itens */
+  .item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Adicione estilos de mídia para tornar o layout responsivo se necessário */
+  @media (max-width: 768px) {
+    .item {
+      flex: 1 1 100%; /* altera para uma coluna em telas menores */
+    }
+  }
